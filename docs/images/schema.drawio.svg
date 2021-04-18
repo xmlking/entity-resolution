@@ -1,3 +1,332 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="763px" height="530px" viewBox="-0.5 -0.5 763 530" content="&lt;mxfile host=&quot;Electron&quot; modified=&quot;2021-04-18T19:11:47.139Z&quot; agent=&quot;5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.5.1 Chrome/89.0.4389.82 Electron/12.0.1 Safari/537.36&quot; version=&quot;14.5.1&quot; etag=&quot;X_TL5YtV1I_4bsu52IbI&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;3HAa6dUVJ5yI1rO5p6Nv&quot; name=&quot;schema&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;"><defs><clipPath id="mx-clip-54-291-152-30-0"><rect x="54" y="291" width="152" height="30"/></clipPath><clipPath id="mx-clip-54-321-152-30-0"><rect x="54" y="321" width="152" height="30"/></clipPath><clipPath id="mx-clip-54-351-152-30-0"><rect x="54" y="351" width="152" height="30"/></clipPath><clipPath id="mx-clip-54-381-152-30-0"><rect x="54" y="381" width="152" height="30"/></clipPath><clipPath id="mx-clip-54-411-152-30-0"><rect x="54" y="411" width="152" height="30"/></clipPath><clipPath id="mx-clip-54-441-152-30-0"><rect x="54" y="441" width="152" height="30"/></clipPath><clipPath id="mx-clip-54-471-152-30-0"><rect x="54" y="471" width="152" height="30"/></clipPath><clipPath id="mx-clip-54-501-152-30-0"><rect x="54" y="501" width="152" height="30"/></clipPath><clipPath id="mx-clip-374-311-152-30-0"><rect x="374" y="311" width="152" height="30"/></clipPath><clipPath id="mx-clip-374-341-152-30-0"><rect x="374" y="341" width="152" height="30"/></clipPath><clipPath id="mx-clip-374-371-152-30-0"><rect x="374" y="371" width="152" height="30"/></clipPath><clipPath id="mx-clip-374-401-152-30-0"><rect x="374" y="401" width="152" height="30"/></clipPath><clipPath id="mx-clip-374-431-152-30-0"><rect x="374" y="431" width="152" height="30"/></clipPath><clipPath id="mx-clip-374-461-152-30-0"><rect x="374" y="461" width="152" height="30"/></clipPath><clipPath id="mx-clip-504-91-172-30-0"><rect x="504" y="91" width="172" height="30"/></clipPath><clipPath id="mx-clip-504-121-172-30-0"><rect x="504" y="121" width="172" height="30"/></clipPath><clipPath id="mx-clip-504-151-172-30-0"><rect x="504" y="151" width="172" height="30"/></clipPath><clipPath id="mx-clip-504-181-172-30-0"><rect x="504" y="181" width="172" height="30"/></clipPath><clipPath id="mx-clip-254-131-172-30-0"><rect x="254" y="131" width="172" height="30"/></clipPath><clipPath id="mx-clip-254-161-172-30-0"><rect x="254" y="161" width="172" height="30"/></clipPath><clipPath id="mx-clip-254-191-172-30-0"><rect x="254" y="191" width="172" height="30"/></clipPath></defs><g><path d="M 50 286 L 50 260 L 210 260 L 210 286" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 50 286 L 50 526 L 210 526 L 210 286" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 50 286 L 210 286" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g fill="#000000" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px"><text x="129.5" y="278.5">Person</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-291-152-30-0)" font-size="12px"><text x="55.5" y="303.5">id</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-321-152-30-0)" font-size="12px"><text x="55.5" y="333.5">first_name</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-351-152-30-0)" font-size="12px"><text x="55.5" y="363.5">last_name</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-381-152-30-0)" font-size="12px"><text x="55.5" y="393.5">dob</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-411-152-30-0)" font-size="12px"><text x="55.5" y="423.5">emails</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-441-152-30-0)" font-size="12px"><text x="55.5" y="453.5">phones: map&lt;cell/land&gt;</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-471-152-30-0)" font-size="12px"><text x="55.5" y="483.5">national_id</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-501-152-30-0)" font-size="12px"><text x="55.5" y="513.5">addresses: map&lt;live/mail&gt;</text></g><path d="M 370 306 L 370 280 L 530 280 L 530 306" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 370 306 L 370 486 L 530 486 L 530 306" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 370 306 L 530 306" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g fill="#000000" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px"><text x="449.5" y="298.5">Address</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-311-152-30-0)" font-size="12px"><text x="375.5" y="323.5">id</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-341-152-30-0)" font-size="12px"><text x="375.5" y="353.5">street_number</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-371-152-30-0)" font-size="12px"><text x="375.5" y="383.5">street_name</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-401-152-30-0)" font-size="12px"><text x="375.5" y="413.5">city</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-431-152-30-0)" font-size="12px"><text x="375.5" y="443.5">state</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-461-152-30-0)" font-size="12px"><text x="375.5" y="473.5">zip</text></g><path d="M 500 86 L 500 60 L 680 60 L 680 86" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 500 86 L 500 206 L 680 206 L 680 86" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 500 86 L 680 86" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g fill="#000000" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px"><text x="589.5" y="78.5">Company</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-504-91-172-30-0)" font-size="12px"><text x="505.5" y="103.5">id</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-504-121-172-30-0)" font-size="12px"><text x="505.5" y="133.5">name</text></g><path d="M 680 161 L 700 161 L 700 101 L 686.37 101" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 681.12 101 L 688.12 97.5 L 686.37 101 L 688.12 104.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 132px; margin-left: 701px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: none; background-color: #ffffff; white-space: nowrap; "><span style="color: rgb(51 , 51 , 51) ; font-size: 12px ; text-align: left ; background-color: rgb(248 , 249 , 250)">Join</span></div></div></div></foreignObject><text x="701" y="135" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">Join</text></switch></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-504-151-172-30-0)" font-size="12px"><text x="505.5" y="163.5">parent_id</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-504-181-172-30-0)" font-size="12px"><text x="505.5" y="193.5">addresses: map&lt;main/branch&gt;</text></g><path d="M 20 60 L 180 60 L 200 80 L 200 170 L 20 170 L 20 60 Z" fill="#f5f5f5" stroke="#666666" stroke-miterlimit="10" pointer-events="none"/><path d="M 180 60 L 180 80 L 200 80" fill="none" stroke="#666666" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 178px; height: 1px; padding-top: 115px; margin-left: 22px;"><div style="box-sizing: border-box; font-size: 0; text-align: left; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; "><font style="font-size: 12px"><b><br />Graph: Vertix Relationship</b><br />1. same time: parent-child-join<br />2. one-few: nested<br />3. maps: flattened<br />4. one-many: edge index<br />5. many-many: edge index<br /><br /></font></div></div></div></foreignObject><text x="22" y="119" fill="#333333" font-family="Helvetica" font-size="14px">Graph: Vertix Relationship...</text></switch></g><path d="M 680 191 L 700 191 L 700 321 L 536.37 321" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 531.12 321 L 538.12 317.5 L 536.37 321 L 538.12 324.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 287px; margin-left: 700px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: none; background-color: #ffffff; white-space: nowrap; ">Nested</div></div></div></foreignObject><text x="700" y="290" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">Nested</text></switch></g><path d="M 210 511 L 290 511 L 290 321 L 363.63 321" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 368.88 321 L 361.88 324.5 L 363.63 321 L 361.88 317.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 416px; margin-left: 290px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: none; background-color: #ffffff; white-space: nowrap; ">Nested</div></div></div></foreignObject><text x="290" y="419" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">Nested</text></switch></g><path d="M 250 126 L 250 100 L 430 100 L 430 126" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 250 126 L 250 216 L 430 216 L 430 126" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 250 126 L 430 126" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><g fill="#000000" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px"><text x="339.5" y="118.5">conpany_person_edge</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-254-131-172-30-0)" font-size="12px"><text x="255.5" y="143.5">company_id</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-254-161-172-30-0)" font-size="12px"><text x="255.5" y="173.5">person_id</text></g><g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-254-191-172-30-0)" font-size="12px"><text x="255.5" y="203.5">edge: founder/cto/employee</text></g><path d="M 250 171 L 230 171 L 230 301 L 216.37 301" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 211.12 301 L 218.12 297.5 L 216.37 301 L 218.12 304.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 430 141 L 465 141 L 465 94.9 L 493.27 94.86" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><path d="M 498.52 94.85 L 491.53 98.36 L 493.27 94.86 L 491.52 91.36 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/><rect x="0" y="0" width="760" height="40" fill="#000000" stroke="none" pointer-events="none" transform="translate(2,3)" opacity="0.25"/><rect x="0" y="0" width="760" height="40" fill="#4da1f5" stroke="none" pointer-events="none"/><g fill="#ffffff" font-family="Helvetica" pointer-events="none" font-size="14px"><text x="51.5" y="25.5">Schema: Elasticsearch Data Modeling</text></g></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/><a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a></switch></svg>
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="763px" height="530px" viewBox="-0.5 -0.5 763 530" content="&lt;mxfile&gt;&lt;diagram id=&quot;3HAa6dUVJ5yI1rO5p6Nv&quot; name=&quot;schema&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs>
+        <clipPath id="mx-clip-54-291-152-30-0">
+            <rect x="54" y="291" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-54-321-152-30-0">
+            <rect x="54" y="321" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-54-351-152-30-0">
+            <rect x="54" y="351" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-54-381-152-30-0">
+            <rect x="54" y="381" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-54-411-152-30-0">
+            <rect x="54" y="411" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-54-441-152-30-0">
+            <rect x="54" y="441" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-54-471-152-30-0">
+            <rect x="54" y="471" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-54-501-152-30-0">
+            <rect x="54" y="501" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-374-311-152-30-0">
+            <rect x="374" y="311" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-374-341-152-30-0">
+            <rect x="374" y="341" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-374-371-152-30-0">
+            <rect x="374" y="371" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-374-401-152-30-0">
+            <rect x="374" y="401" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-374-431-152-30-0">
+            <rect x="374" y="431" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-374-461-152-30-0">
+            <rect x="374" y="461" width="152" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-504-91-172-30-0">
+            <rect x="504" y="91" width="172" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-504-121-172-30-0">
+            <rect x="504" y="121" width="172" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-504-151-172-30-0">
+            <rect x="504" y="151" width="172" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-504-181-172-30-0">
+            <rect x="504" y="181" width="172" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-504-211-172-30-0">
+            <rect x="504" y="211" width="172" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-254-131-172-30-0">
+            <rect x="254" y="131" width="172" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-254-161-172-30-0">
+            <rect x="254" y="161" width="172" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-254-191-172-30-0">
+            <rect x="254" y="191" width="172" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-254-221-172-30-0">
+            <rect x="254" y="221" width="172" height="30"/>
+        </clipPath>
+    </defs>
+    <g>
+        <path d="M 50 286 L 50 260 L 210 260 L 210 286" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 50 286 L 50 526 L 210 526 L 210 286" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 50 286 L 210 286" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px">
+            <text x="129.5" y="278.5">
+                Person
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-291-152-30-0)" font-size="12px">
+            <text x="55.5" y="303.5">
+                id
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-321-152-30-0)" font-size="12px">
+            <text x="55.5" y="333.5">
+                first_name
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-351-152-30-0)" font-size="12px">
+            <text x="55.5" y="363.5">
+                last_name
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-381-152-30-0)" font-size="12px">
+            <text x="55.5" y="393.5">
+                dob
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-411-152-30-0)" font-size="12px">
+            <text x="55.5" y="423.5">
+                emails
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-441-152-30-0)" font-size="12px">
+            <text x="55.5" y="453.5">
+                phones: map&lt;cell/land&gt;
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-471-152-30-0)" font-size="12px">
+            <text x="55.5" y="483.5">
+                national_id
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-54-501-152-30-0)" font-size="12px">
+            <text x="55.5" y="513.5">
+                addresses: map&lt;live/mail&gt;
+            </text>
+        </g>
+        <path d="M 370 306 L 370 280 L 530 280 L 530 306" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 370 306 L 370 486 L 530 486 L 530 306" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 370 306 L 530 306" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px">
+            <text x="449.5" y="298.5">
+                Address
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-311-152-30-0)" font-size="12px">
+            <text x="375.5" y="323.5">
+                id
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-341-152-30-0)" font-size="12px">
+            <text x="375.5" y="353.5">
+                street_number
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-371-152-30-0)" font-size="12px">
+            <text x="375.5" y="383.5">
+                street_name
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-401-152-30-0)" font-size="12px">
+            <text x="375.5" y="413.5">
+                city
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-431-152-30-0)" font-size="12px">
+            <text x="375.5" y="443.5">
+                state
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-374-461-152-30-0)" font-size="12px">
+            <text x="375.5" y="473.5">
+                zip
+            </text>
+        </g>
+        <path d="M 500 86 L 500 60 L 680 60 L 680 86" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 500 86 L 500 236 L 680 236 L 680 86" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 500 86 L 680 86" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px">
+            <text x="589.5" y="78.5">
+                Company
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-504-91-172-30-0)" font-size="12px">
+            <text x="505.5" y="103.5">
+                id
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-504-121-172-30-0)" font-size="12px">
+            <text x="505.5" y="133.5">
+                name
+            </text>
+        </g>
+        <path d="M 680 191 L 700 191 L 700 101 L 686.37 101" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 681.12 101 L 688.12 97.5 L 686.37 101 L 688.12 104.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 147px; margin-left: 701px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: none; background-color: #ffffff; white-space: nowrap; ">
+                                <span style="color: rgb(51 , 51 , 51) ; font-size: 12px ; text-align: left ; background-color: rgb(248 , 249 , 250)">
+                                    Join
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="701" y="150" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    Join
+                </text>
+            </switch>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-504-151-172-30-0)" font-size="12px">
+            <text x="505.5" y="163.5">
+                description
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-504-181-172-30-0)" font-size="12px">
+            <text x="505.5" y="193.5">
+                parent_id
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-504-211-172-30-0)" font-size="12px">
+            <text x="505.5" y="223.5">
+                addresses: map&lt;main/branch&gt;
+            </text>
+        </g>
+        <path d="M 20 60 L 180 60 L 200 80 L 200 170 L 20 170 L 20 60 Z" fill="#f5f5f5" stroke="#666666" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 180 60 L 180 80 L 200 80" fill="none" stroke="#666666" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 178px; height: 1px; padding-top: 115px; margin-left: 22px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: none; white-space: normal; word-wrap: normal; ">
+                                <font style="font-size: 12px">
+                                    <b>
+                                        <br/>
+                                        Graph: Vertix Relationship
+                                    </b>
+                                    <br/>
+                                    1. same time: parent-child-join
+                                    <br/>
+                                    2. one-few: nested
+                                    <br/>
+                                    3. maps: flattened
+                                    <br/>
+                                    4. one-many: edge index
+                                    <br/>
+                                    5. many-many: edge index
+                                    <br/>
+                                    <br/>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="22" y="119" fill="#333333" font-family="Helvetica" font-size="14px">
+                    Graph: Vertix Relationship...
+                </text>
+            </switch>
+        </g>
+        <path d="M 680 221 L 700 221 L 700 321 L 536.37 321" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 531.12 321 L 538.12 317.5 L 536.37 321 L 538.12 324.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 280px; margin-left: 700px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: none; background-color: #ffffff; white-space: nowrap; ">
+                                Nested
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="700" y="283" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    Nested
+                </text>
+            </switch>
+        </g>
+        <path d="M 210 511 L 290 511 L 290 321 L 363.63 321" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 368.88 321 L 361.88 324.5 L 363.63 321 L 361.88 317.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 416px; margin-left: 290px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: none; background-color: #ffffff; white-space: nowrap; ">
+                                Nested
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="290" y="419" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    Nested
+                </text>
+            </switch>
+        </g>
+        <path d="M 250 126 L 250 100 L 430 100 L 430 126" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 250 126 L 250 246 L 430 246 L 430 126" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 250 126 L 430 126" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="14px">
+            <text x="339.5" y="118.5">
+                conpany_person_edge
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-254-131-172-30-0)" font-size="12px">
+            <text x="255.5" y="143.5">
+                id
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-254-161-172-30-0)" font-size="12px">
+            <text x="255.5" y="173.5">
+                company_id
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-254-191-172-30-0)" font-size="12px">
+            <text x="255.5" y="203.5">
+                person_id
+            </text>
+        </g>
+        <g fill="#000000" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-254-221-172-30-0)" font-size="12px">
+            <text x="255.5" y="233.5">
+                edge: founder/cto/employee
+            </text>
+        </g>
+        <path d="M 250 201 L 230 201 L 230 301 L 216.37 301" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 211.12 301 L 218.12 297.5 L 216.37 301 L 218.12 304.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 430 171 L 465 171 L 465 94.9 L 493.27 94.86" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 498.52 94.85 L 491.53 98.36 L 493.27 94.86 L 491.52 91.36 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>
+        <rect x="0" y="0" width="760" height="40" fill="#000000" stroke="none" transform="translate(2,3)" opacity="0.25"/>
+        <rect x="0" y="0" width="760" height="40" fill="#4da1f5" stroke="none" pointer-events="none"/>
+        <g fill="#ffffff" font-family="Helvetica" pointer-events="none" font-size="14px">
+            <text x="51.5" y="25.5">
+                Schema: Elasticsearch Data Modeling
+            </text>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
