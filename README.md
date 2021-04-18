@@ -7,7 +7,6 @@ entity resolution
 Schema
 
 <p align="center">
-  <img src="docs/images/graph-aided-search.png" width="60%">
   <img src="docs/images/er.drawio.svg" width="60%">
 </p>
 
