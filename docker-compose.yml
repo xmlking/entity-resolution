@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+
+### ElasticSearch ###
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.0
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - discovery.type=single-node
+      # - http.cors.enabled=true
+      # - http.cors.allow-origin=*
+      - "plugin.mandatory:analysis-phonetic"
+      - ES_JAVA_OPTS=-Xms512m -Xmx1024m
+      # - ELASTIC_PASSWORD_FILE=/run/secrets/bootstrapPassword.txt
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+        - esdata:/usr/share/elasticsearch/data
+        - esplug:/usr/share/elasticsearch/plugins
+    ports:
+        - "9200:9200"
+        - "9300:9300"
+    depends_on:
+      - elasticsearch-plugins
+
+### Init Container for ElasticSearch ###
+  elasticsearch-plugins:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.0
+    entrypoint: sh -c 'test -d "plugins/analysis-phonetic" || bin/elasticsearch-plugin install -s analysis-phonetic'
+    tty: true
+    volumes:
+      - esplug:/usr/share/elasticsearch/plugins
+
+### Kibana ###
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.12.0
+    environment:
+      - elasticsearch.hosts=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+  
+### Volumes ###
+volumes:
+  esdata: {}
+  esplug: {}
