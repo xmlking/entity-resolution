@@ -1,6 +1,8 @@
 # Entity Resolution
 
-entity resolution
+**Entity resolution** (ER) is the task of disambiguating records that correspond to real world **entities** across and within datasets.
+
+The problems associated with entity resolution are equally big as the volume and velocity of data grow, inference across networks and semantic relationships between entities becomes increasingly difficult. This project attempts to provide a solution using *Elasticsearch* and *Graph* Database.
 
 ## Overview
 
