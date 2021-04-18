@@ -7,17 +7,21 @@ entity resolution
 Schema
 
 <p align="center">
-  <img src="docs/images/schema.drawio.svg" width="60%">
+  <img src="docs/images/graph-aided-search.png" width="60%">
+  <img src="docs/images/er.drawio.svg" width="60%">
 </p>
+
+<!-- ![overview](https://s3-eu-west-1.amazonaws.com/graphaware/assets/graphAidedSearchIntro2.png) -->
 <!-- 
 ![My Diagram](docs/images/schema.drawio.svg) -->
+
+Links: [Elasticsearch](docs/elasticsearch.md), [Data Modeling](docs/modeling.md), [Kibana Console](/docs/console.md)
 
 ### TODO
 
 - [x] Start/Stop ES with docker-compose
 - [ ] Generate test data
 - [ ] Batch load test data with [benthos](https://www.benthos.dev/)
-- [ ] 
 
 ## Getting Started
 
@@ -41,4 +45,5 @@ docker compose down
 - [zentity](https://zentity.io/)
 - [real-time-entity-resolution](https://www.slideshare.net/o19s/real-time-entity-resolution-with-elasticsearch-haystack-2018)
 - [zentity-docs](https://zentity.io/docs/basic-usage/)
-- [Elasticsearch as a Graph Database](https://medium.com/@imriqwe/elasticsearch-as-a-graph-database-bc0eee7f7622)
+- [GraphAware Graph-Aided Search](https://github.com/graphaware/graph-aided-search)
+- [Graph-Powered Search: Neo4j & Elasticsearch](https://graphaware.com/assets/graphpoweredsearch-neo4j-elasticsearch.pdf)

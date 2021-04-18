@@ -1,0 +1,39 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "paths": {
+          "tokenizer": "path_hierarchy"
+        }
+      }
+    }
+  },
+  "mapping": {
+    "person": {
+      "properties": {
+        "name": {
+          "properties": {
+            "first": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "last": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "path": {
+          "type":  "string",
+          "index": "not_analyzed",
+          "fields": {
+            "tree": {
+              "type":     "string",
+              "analyzer": "paths"
+            }
+          }
+        }
+      }
+    }
+  }
+}
