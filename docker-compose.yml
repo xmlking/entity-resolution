@@ -12,6 +12,7 @@ services:
       # - http.cors.enabled=true
       # - http.cors.allow-origin=*
       - "plugin.mandatory:analysis-phonetic"
+      - xpack.ml.enabled=false
       - ES_JAVA_OPTS=-Xms512m -Xmx1024m
       # - ELASTIC_PASSWORD_FILE=/run/secrets/bootstrapPassword.txt
     ulimits:
