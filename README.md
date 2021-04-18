@@ -11,6 +11,12 @@ docker compose up
 open http://localhost:5601/app/dev_tools#/console
 ```
 
+## Stop
+
+```bash
+docker compose down
+```
+
 ## Test
 
 ```bash
