@@ -4,8 +4,6 @@ entity resolution
 
 ## Overview
 
-Schema
-
 <p align="center">
   <img src="docs/images/er.drawio.svg" width="60%">
 </p>
