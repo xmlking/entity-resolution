@@ -11,7 +11,7 @@ The problems associated with entity resolution are equally big as the volume and
 </p>
 
 <!-- ![overview](https://s3-eu-west-1.amazonaws.com/graphaware/assets/graphAidedSearchIntro2.png) -->
-<!-- 
+<!--
 ![My Diagram](docs/images/schema.drawio.svg) -->
 
 Links: [Elasticsearch](docs/elasticsearch.md), [Data Modeling](docs/modeling.md), [Kibana Console](/docs/console.md)
