@@ -1,0 +1,47 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    labels:
+      - dependencies
+      - actions
+      - "Skip Changelog"
+    schedule:
+      day: sunday
+      interval: weekly
+
+  - package-ecosystem: docker
+    directory: /
+    labels:
+      - dependencies
+      - docker
+      - "Skip Changelog"
+    schedule:
+      day: sunday
+      interval: weekly
+
+  - package-ecosystem: gomod
+    directory: /
+    labels:
+      - dependencies
+      - go
+      - "Skip Changelog"
+    schedule:
+      day: sunday
+      interval: weekly
+  #    ignore:
+  #      # This needs to be locked to the same version we generate with, which is
+  #      # controlled via make/go/dep_protoc_gen_go_grpc.mk
+  #      - dependency-name: "google.golang.org/grpc"
+  #      # This needs to be locked to the same version we generate with, which is
+  #      # controlled via make/go/dep_protoc_gen_go.mk
+  #      - dependency-name: "google.golang.org/protobuf"
+  - package-ecosystem: gomod
+    directory: /service/engine
+    labels:
+      - dependencies
+      - go
+      - "Skip Changelog"
+    schedule:
+      day: sunday
+      interval: weekly

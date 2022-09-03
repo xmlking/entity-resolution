@@ -1,0 +1,21 @@
+engine:
+  - service/keying/**/*
+  - change-notes/**/*engine*
+documentation:
+  - "**/*.md"
+  - docs/**/*
+er:
+  - cmd/er/**/*
+  - change-notes/**/*agent*
+loader:
+  - cmd/loader/**/*
+  - change-notes/**/*tz*
+demo:
+  - cmd/demo/**/*
+  - change-notes/**/*demo*
+workspace:
+  - .github/**/*
+  - Dockerfile*.*
+  - go.mod
+  - Taskfile.yml
+  - tasks/*

@@ -42,8 +42,8 @@ services:
       - REDIS_CLOUD_HOST
       - REDIS_CLOUD_PASSWORD
     volumes:
-      - ./infra/grafana/provisioning/datasources/:/etc/grafana/provisioning/datasources/:ro
-      - ./infra/grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/:ro
+      - ./grafana/provisioning/datasources/:/etc/grafana/provisioning/datasources/:ro
+      - ./grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/:ro
       - grafana:/var/lib/grafana
     links:
       - redis
