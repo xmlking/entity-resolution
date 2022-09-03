@@ -15,7 +15,7 @@ jobs:
       - name: Start Release
         run: |
           gh extensions install carlsberg/gh-releaser
-          gh releaser start
+          gh releaser start ${{ inputs.tag }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OWNER: ${{ github.repository_owner }}
