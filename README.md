@@ -63,8 +63,6 @@ go-mod-upgrade
 # then commit the changes. 
 ```
 
-![go-mod-upgrade](docs/images/go-mod-upgrade.png)
-
 ### Update deps
 
 ```shell
