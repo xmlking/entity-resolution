@@ -16,14 +16,6 @@ The problems associated with entity resolution are equally big as the volume and
 
 Links: [Elasticsearch](docs/elasticsearch.md), [Data Modeling](docs/modeling.md), [Kibana Console](/docs/console.md)
 
-### TODO
-
-- [x] Start/Stop ES with docker-compose
-- [ ] Generate test data
-- [ ] Batch load test data with [benthos](https://www.benthos.dev/)
-- [ ] GoLang
-  - [ ] [redisearch-go](https://github.com/RediSearch/redisearch-go)
-  - [ ] [connect-go](https://github.com/bufbuild/connect-go)
 
 ## Getting Started
 
@@ -41,6 +33,16 @@ open http://localhost:5601/app/dev_tools#/console
 ```bash
 docker compose down
 ```
+
+## TODO
+
+- [x] Start/Stop ES with docker-compose
+- [ ] Generate test data
+- [ ] Batch load test data with [benthos](https://www.benthos.dev/)
+- [ ] GoLang
+  - [ ] [redisearch-go](https://github.com/RediSearch/redisearch-go)
+  - [ ] [connect-go](https://github.com/bufbuild/connect-go)
+
 
 ## Reference
 
