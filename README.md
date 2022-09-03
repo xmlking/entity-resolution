@@ -21,6 +21,9 @@ Links: [Elasticsearch](docs/elasticsearch.md), [Data Modeling](docs/modeling.md)
 - [x] Start/Stop ES with docker-compose
 - [ ] Generate test data
 - [ ] Batch load test data with [benthos](https://www.benthos.dev/)
+- [ ] GoLang
+  - [ ] [redisearch-go](https://github.com/RediSearch/redisearch-go)
+  - [ ] [connect-go](https://github.com/bufbuild/connect-go)
 
 ## Getting Started
 
