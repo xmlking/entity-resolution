@@ -8,6 +8,8 @@ import (
 	"strings"
 )
 
+// TODO: https://cobra.dev/
+
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {

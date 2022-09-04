@@ -6,7 +6,7 @@ My Hosted Redis https://app.redislabs.com/#/databases
 
 ### Prerequisites
 
-```bash
+```shell
 brew install redis
 brew install redis-developer/tap/riot-file
 brew install redis-developer/tap/riot-gen
@@ -14,7 +14,7 @@ brew install redis-developer/tap/riot-gen
 
 ### Setup
 
-```bash
+```shell
 # start local redis
 docker compose -f infra/redis.yml up
 # stop local redis before restart again
@@ -44,7 +44,7 @@ http://localhost:3000/plugins/redis-app/
 
 Basics 
 
-```bash
+```shell
 PING Marco!
 MODULE LIST
 
@@ -53,7 +53,7 @@ MONITOR
 # redis-cli MONITOR
 ```
 
-```bash
+```shell
 KEYS *
 
 HGETALL people:1750384707
@@ -66,11 +66,76 @@ FLUSHDB
 XRANGE events - +
 ```
 
+RedisGraph
+
+```shell
+# https://github.com/redis/jedis/blob/master/src/test/java/redis/clients/jedis/modules/graph/GraphAPITest.java
+CREATE (:human{name:'danny',age:12})
+CREATE (:person{name:'roi',age:32})
+CREATE (:person{name:'amit',age:30})
+MATCH (a:person), (b:person) WHERE (a.name = 'roi' AND b.name='amit')  CREATE (a)-[:knows]->(b)
+MATCH (a:person) WHERE (a.name = 'roi') DELETE a
+CREATE (:person{name:'roi',age:32})
+MATCH (a:person), (b:person) WHERE (a.name = 'roi' AND b.name='amit')  CREATE (a)-[:knows]->(a)
+MATCH (a:person) WHERE (a.name = 'roi') DELETE a
+CREATE (:person{name:'roi',age:32})
+CREATE (:person{name:'amit',age:30})
+MATCH (a:person), (b:person) WHERE (a.name = 'roi' AND b.name='amit')  CREATE (a)-[:knows]->(a)
+MATCH (a:person)-[e]->() WHERE (a.name = 'roi') DELETE e
+CREATE (:person{name:'roi',age:32})
+CREATE INDEX ON :person(age)
+CREATE INDEX ON :person(age1)
+DROP INDEX ON :person(age1)
+
+# array support
+CREATE (:person{name:'a',age:32,array:[0,1,2]})
+WITH [0,1,2] as x return x
+MATCH(n) return collect(n) as x
+CREATE (:restaurant {location: point({latitude:30.27822306, longitude:-97.75134723})})
+MATCH (restaurant) RETURN restaurant
+UNWIND range(0,100) AS x WITH x AS x WHERE x = 100 RETURN x
+MATCH (n:N {val:$val}) RETURN n.val
+
+# Full-text search now included
+# http://www.odbms.org/2020/04/introducing-redisgraph-2-0/
+CALL db.idx.fulltext.createNodeIndex('Person','name')
+CALL db.idx.fulltext.queryNodes('Person','Bob') YIELD node AS p RETURN p.name
+# linked search
+CALL db.idx.fulltext.queryNodes('Person','%yif%') YIELD node
+MATCH p=(node)-[:CONNECTED*1..3]->(:Person {name:'Pieter'})
+RETURN p.name, p.title, length(p) AS connectedness
+ORDER BY connectedness ASC LIMIT 20
+
+MATCH (me:Person)-->(friend:Person)-->(fof:Person)
+WHERE me.name='Pieter'
+RETURN friend.name, fof.name
+
+MATCH (me:Person)-->(friend:Person)-[f:FRIEND]->(fof:Person)
+WHERE me.name='Pieter'
+RETURN friend, f, fof
+
+# We can query for suggested introductions in the left-hand graph by following the “KNOWS” relationship:
+MATCH (b:Person)-[:KNOWS]->(a:Person)-[:KNOWS]->(c:Person)
+WHERE NOT (b)-[:KNOWS]-(c) AND b <> c
+RETURN b, c
+
+MATCH (b:Person)<-[:MANAGES]-(a:Person)-[:MANAGES]->(c:Person)
+WHERE NOT (b)-[:PEER]-(c) AND b <> c
+WITH b, c,
+CASE b.level
+WHEN 'Director' THEN 'mentor'
+ELSE 'peer'
+END AS role
+MERGE (b)-[:PEER {role:role}]->(c)
+```
+
+
+
 ### Data Loading
 
 Sample Data https://github.com/redis-developer/redis-datasets/tree/master/user-database
 
-```bash
+```shell
 redis-cli -h localhost -p 6379 < apps/entity-service/data/employee.redis
 ```
 
@@ -93,7 +158,10 @@ redis-cli -h localhost -p 6379 < apps/entity-service/data/employee.redis
     - [RedisGraph bulk loader](https://github.com/RedisGraph/redisgraph-bulk-loader)
     - [search-graph-demo](https://github.com/stockholmux/conf19-search-graph-demo)
     - [Redis and Spring: Building High Performance RESTful APIs](https://github.com/wilvdb/redi2read/blob/main/src/main/kotlin/com/redislabs/edu/redi2read/services/RecommendationService.kt)
-    
+    - jedis [Graph SDK](https://github.com/redis/jedis/tree/master/src/main/java/redis/clients/jedis/graph)
+      jedis [Graph SDK Examples](https://github.com/redis/jedis/blob/master/src/test/java/redis/clients/jedis/modules/graph/GraphAPITest.java)
+    - Building a Recommendation Engine with RedisGraph[video](https://www.youtube.com/watch?v=ZLJ-3DJVufw)
+
 - **Redis Spring**
     - [Spring Data Redis](https://docs.spring.io/spring-data/redis/docs/2.5.3/reference/html/#why-spring-redis)
     - [Accessing Data Reactively with Redis](https://spring.io/guides/gs/spring-data-reactive-redis/)

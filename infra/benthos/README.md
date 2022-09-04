@@ -4,7 +4,7 @@
 
 ## Setup
 
-```bash
+```shell
 # Install
 brew install benthos
 
@@ -25,7 +25,7 @@ Here I am including few records from downloaded **npidata_pfile_20050523-2021061
 
 ## Commands
 
-```bash
+```shell
 #echo config
 benthos -c config.yaml echo
 

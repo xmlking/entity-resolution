@@ -86,7 +86,7 @@ golangci-lint run -c .github/linters/.golangci.yml
 
 ### Launch Redis
 
-```bash
+```shell
 docker compose up
 # docker compose up redis
 # open Grafana UI and enable redis plugin
