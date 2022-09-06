@@ -11,8 +11,8 @@ generate: lint
 
 publish: generate
 	@echo "publish to BSR..."
-	@buf mod update entityapis
-	@buf push entityapis
+	@buf mod update proto/entityapis
+	@buf push proto/entityapis
 
 release: publish
 	@git add .
