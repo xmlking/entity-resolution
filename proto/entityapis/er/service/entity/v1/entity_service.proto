@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+// provides api to create, read, update and delete policies.
+package er.service.entity.v1;
+
+import "er/schema/entity/v1/entity.proto";
+
+option java_multiple_files = true;
+option java_package = "er.service.entity.v1";
+
+// EntityService API
+service EntityService {
+  rpc Ingest(er.schema.entity.v1.Member) returns (Response);
+  // rpc IngestStream(stream er.schema.entity.v1.Member) returns (stream Response) {}
+  rpc Inquiry(er.schema.entity.v1.Member) returns (Response);
+  // rpc InquiryStream(stream er.schema.entity.v1.Member) returns (stream Response) {}
+}
+
+message Response {
+  optional string key = 1;
+  er.schema.entity.v1.Status status = 2;
+}

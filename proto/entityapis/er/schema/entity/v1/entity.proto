@@ -1,0 +1,92 @@
+syntax = "proto3";
+
+package er.schema.entity.v1;
+
+import "google/type/date.proto";
+import "google/type/datetime.proto";
+import "google/type/latlng.proto";
+//import "google/protobuf/timestamp.proto";
+//import "google/type/phone_number.proto";
+//import "google/type/postal_address.proto";
+import "tagger/tagger.proto";
+import "validate/validate.proto";
+
+option java_multiple_files = true;
+option java_package = "er.schema.entity.v1";
+
+// Address US PostalAddress
+message Address {
+  string suite = 1;
+  string street = 2;
+  string city = 3;
+  string state = 4;
+  string code = 5;
+  string country = 6;
+  optional google.type.LatLng location = 7;
+}
+
+/*
+message Location {
+  double lat = 1 [(validate.rules).double = { gte: -90,  lte: 90 }];
+  double lng = 2 [(validate.rules).double = { gte: -180, lte: 180 }];
+}
+*/
+
+message Name {
+  string first = 1 [(validate.rules).string = {
+    pattern: "^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$",
+    max_bytes: 256,
+  }];
+  string last = 2;
+  optional string middle = 3;
+  optional string title = 4 [(tagger.tags) = "avro:\"title\" graphql:\"withNewTags,optional\""];
+}
+enum Status {
+  STATUS_UNSPECIFIED = 0;
+  STATUS_FULL_MATCH = 1;
+  STATUS_PARTIAL_MATCH = 2;
+  STATUS_NO_HIT = 3;
+  STATUS_NEW = 4;
+}
+
+enum Gender {
+  GENDER_UNSPECIFIED = 0;
+  GENDER_MALE = 1;
+  GENDER_FEMALE = 2;
+  GENDER_OTHER = 3;
+}
+
+message Member {
+  string external_id = 1 [(validate.rules).string.uuid = true];
+  optional string national_id = 12;
+  repeated Name names = 2 [(validate.rules).repeated.min_items = 1];
+  google.type.Date dob = 3;
+  Gender gender = 4;
+  map<string, string> emails = 5 [(validate.rules).map = {
+    max_pairs: 5
+    keys: {}
+    values: {
+      string: {
+        email: true
+      }
+    }
+  }];
+  map<string, string> phones = 6 [(validate.rules).map = {
+    max_pairs: 5
+    keys: {
+      string: {
+        min_len: 5,
+      }
+    }
+    values: {
+      string: {
+        min_len: 5,
+        max_len: 15
+      }
+    }
+  }];
+  // map<string, google.type.PhoneNumber> phones = 6 ;
+  repeated Address addresses = 7;
+  //  repeated google.type.PostalAddress addresses = 7;
+  optional google.type.DateTime created_on = 20;
+}

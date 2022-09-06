@@ -1,0 +1,23 @@
+version: v1
+name: buf.build/micro/entityapis
+deps:
+  - buf.build/srikrsna/protoc-gen-gotag
+  - buf.build/envoyproxy/protoc-gen-validate
+
+lint:
+  use:
+    - DEFAULT
+    - FILE_LOWER_SNAKE_CASE
+  ignore_only:
+    RPC_REQUEST_RESPONSE_UNIQUE:
+      - er/service/entity/v1/entity_service.proto
+    RPC_RESPONSE_STANDARD_NAME:
+      - er/service/entity/v1/entity_service.proto
+    RPC_REQUEST_STANDARD_NAME:
+      - er/service/entity/v1/entity_service.proto
+  rpc_allow_google_protobuf_empty_requests: true
+  rpc_allow_google_protobuf_empty_responses: true
+
+breaking:
+  use:
+    - WIRE_JSON

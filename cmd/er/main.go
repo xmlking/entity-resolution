@@ -6,11 +6,14 @@ import (
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/xmlking/entity-resolution/internal/redis"
 )
 
 // TODO: https://cobra.dev/
 
 func main() {
+	redis.Init()
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"

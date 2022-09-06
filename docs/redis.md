@@ -66,7 +66,8 @@ FLUSHDB
 XRANGE events - +
 ```
 
-RedisGraph
+<details>
+  <summary>RedisGraph</summary>
 
 ```shell
 # https://github.com/redis/jedis/blob/master/src/test/java/redis/clients/jedis/modules/graph/GraphAPITest.java
@@ -129,7 +130,7 @@ END AS role
 MERGE (b)-[:PEER {role:role}]->(c)
 ```
 
-
+</details>
 
 ### Data Loading
 

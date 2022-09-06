@@ -46,7 +46,7 @@ cat .git/hooks/commit-msg
 
 ## Maintenance
 
-Update generated proto code from **BSR**, after you publish **tzproto** to [BSR](https://buf.build/entiy-resolution)
+Update generated proto code from **BSR**, after you publish **proto** to [BSR](https://buf.build/entiy-resolution)
 
 ```shell
 export GOPRIVATE=github.com/entity-resolution/*,go.buf.build
