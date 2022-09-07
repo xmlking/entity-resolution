@@ -13,12 +13,15 @@
 brew install bufbuild/buf/buf
 # or use `go install` to install Buf
 go install github.com/bufbuild/buf/cmd/buf@latest
+# optionally install grpcurl: a command line gRPC invoker 
+brew install grpcurl
 
 # Install protoc plugins
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 go install github.com/srikrsna/protoc-gen-gotag@latest
 go install entgo.io/contrib/entproto/cmd/protoc-gen-entgrpc@latest
+go install github.com/bufbuild/connect-go/cmd/protoc-gen-connect-go@latest
 
 go install github.com/envoyproxy/protoc-gen-validate@latest
 # Installing PGV can currently only be done from source: 
@@ -27,6 +30,12 @@ go get -d github.com/envoyproxy/protoc-gen-validate
 cd ~/go/src/github.com/envoyproxy/protoc-gen-validate
 git pull
 make build
+```
+
+npm is configured to use the public npm registry at [registry.npmjs.org](https://registry.npmjs.org/) by default. To configure npm to use Buf's npm registry at [npm.buf.build](https://npm.buf.build/) in addition to the default registry, use this command to [set](https://docs.npmjs.com/cli/v8/commands/npm-config#set) your npm config:
+
+```shell
+npm config set @buf:registry https://npm.buf.build
 ```
 
 [Editor Integration](https://docs.buf.build/editor-integration) (Optional)

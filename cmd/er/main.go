@@ -1,29 +1,32 @@
 package main
 
 import (
-	"fmt"
+	"context"
 	"log"
 	"net/http"
-	"os"
-	"strings"
 
-	"github.com/xmlking/entity-resolution/internal/redis"
+	"github.com/bufbuild/connect-go"
+	schema_entity_v1 "github.com/xmlking/entity-resolution/gen/go/er/schema/entity/v1"
+	"github.com/xmlking/entity-resolution/gen/go/er/service/entity/v1/entityv1connect"
+	// "github.com/xmlking/entity-resolution/internal/redis"
 )
 
 // TODO: https://cobra.dev/
 
 func main() {
-	redis.Init()
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
+	// redis.Init()
+	client := entityv1connect.NewEntityServiceClient(
+		http.DefaultClient,
+		"http://localhost:8080",
+	)
+	req := connect.NewRequest(&schema_entity_v1.Member{
+		ExternalId: "123e4567-e89b-12d3-a456-426614174000",
+	})
+	req.Header().Set("Some-Header", "hello from connect")
+	res, err := client.Ingest(context.Background(), req)
+	if err != nil {
+		log.Fatalln(err)
 	}
-	log.Println("start server")
-	http.HandleFunc("/", handler)
-	_ = http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
-}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-	path := r.URL.Path
-	fmt.Fprint(w, len(strings.Split(path, "/")))
+	log.Println(res.Msg.Key)
+	log.Println(res.Header().Get("Some-Other-Header"))
 }

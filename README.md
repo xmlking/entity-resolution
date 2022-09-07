@@ -206,8 +206,9 @@ docker run -it --rm --platform linux/amd64 $DOCKER_IMAGE:$VERSION
 - [ ] Generate test data
 - [ ] Batch load test data with [benthos](https://www.benthos.dev/)
 - [ ] GoLang
-    - [ ] [redisearch-go](https://github.com/RediSearch/redisearch-go)
-    - [ ] [connect-go](https://github.com/bufbuild/connect-go)
+    - [ ] [redisearch-go](https://github.com/RediSearch/redisearch-go) 
+    - [ ] [Connect-Go](https://connect.build/docs/go/getting-started/) 
+    - [ ] [Connect-Web](https://connect.build/docs/web/getting-started/)
 
 ## Reference
 
