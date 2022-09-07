@@ -8,7 +8,6 @@ import "google/type/latlng.proto";
 //import "google/protobuf/timestamp.proto";
 //import "google/type/phone_number.proto";
 //import "google/type/postal_address.proto";
-import "tagger/tagger.proto";
 import "validate/validate.proto";
 
 option java_multiple_files = true;
@@ -39,7 +38,7 @@ message Name {
   }];
   string last = 2;
   optional string middle = 3;
-  optional string title = 4 [(tagger.tags) = "avro:\"title\" graphql:\"withNewTags,optional\""];
+  optional string title = 4;
 }
 enum Status {
   STATUS_UNSPECIFIED = 0;

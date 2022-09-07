@@ -7,7 +7,6 @@ generate: lint
 	@echo "generate..."
 	@rm -rf gen
 	@buf generate
-	@buf generate --template buf.gen.tag.yaml
 
 publish: generate
 	@echo "publish to BSR..."

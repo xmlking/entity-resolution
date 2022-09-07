@@ -267,7 +267,7 @@ class Name$Type extends MessageType<Name> {
             { no: 1, name: "first", kind: "scalar", T: 9 /*ScalarType.STRING*/, options: { "validate.rules": { string: { maxBytes: "256", pattern: "^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$" } } } },
             { no: 2, name: "last", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 3, name: "middle", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "title", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/, options: { "tagger.tags": "avro:\"title\" graphql:\"withNewTags,optional\"" } }
+            { no: 4, name: "title", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
         ]);
     }
     create(value?: PartialMessage<Name>): Name {
