@@ -34,4 +34,4 @@ plugins:
     out: gen/ts
     opt:
       - target=ts
-      - generate_dependencies
+#      - generate_dependencies

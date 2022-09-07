@@ -1,0 +1,78 @@
+# https://taskfile.dev
+################################################################################
+# Target: go-mod                                                               #
+################################################################################
+
+version: '3'
+
+tasks:
+  default:
+    desc: "mod default is to run 'verify' task"
+    cmds:
+      - task: verify
+
+  sync:
+    desc: Delete go.sum, sync Go modules
+    cmds:
+      - echo "Removing all go.sum files and download sync deps...."
+      - |
+        for d in `find * -name 'go.mod'`; do
+          pushd `dirname $d` >/dev/null
+          echo delete and sync $d
+          rm -f go.sum
+          go mod download
+          go mod tidy
+          popd >/dev/null
+        done
+    silent: true
+
+  verify:
+    desc: Verify and tidy Go modules
+    cmds:
+      - echo "Go mod verify and tidy...."
+      - |
+        for d in `find * -name 'go.mod'`; do
+          pushd `dirname $d` >/dev/null
+          echo verifying $d
+          go mod verify
+          go mod tidy
+          popd >/dev/null
+        done
+    silent: true
+
+  outdated:
+    desc: Show outdated dependencies
+    cmds:
+      - cmd: go-mod-upgrade
+        ignore_error: true
+
+  update:
+    desc: Update outdated dependencies
+    cmds:
+      - echo "Go mod update and tidy...."
+      - |
+        for d in `find * -name 'go.mod'`; do
+          pushd `dirname $d` >/dev/null
+          echo updating $d
+          go get -u
+          go mod tidy
+          popd >/dev/null
+        done
+    silent: true
+
+
+  release:
+    desc: Go mod tag and release.
+    cmds:
+      - echo "Go mod tag and release...."
+      - |
+        find * -name 'go.mod' -mindepth 1 -exec dirname {} \; | sort | while read dir; do
+        pushd $dir >/dev/null
+        gh release create $dir/{{.TAG}} --generate-notes
+        popd >/dev/null
+        done
+        gh release create {{.TAG}} --generate-notes
+    preconditions:
+      - sh: "[ '{{.TAG}}' != '' ]"
+        msg: "Missing  TAG. Usage: 'task mod:release TAG=v1.1.1'"
+    silent: true
