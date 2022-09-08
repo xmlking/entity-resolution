@@ -8,8 +8,8 @@ version: '3'
 vars:
   GIT_COMMIT:
     sh: git log -n 1 --format=%h
-  GIT_REPO: github.com/xmlking/toolkit.git
-  DOCKER_REGISTRY: docker.pkg.github.com/xmlking/toolkit
+  GIT_REPO: github.com/xmlking/entity-resolution.git
+  DOCKER_REGISTRY: ghcr.io/xmlking/toolkit
   VERSION:
     sh: git rev-parse --short HEAD
   GO_PACKAGES:

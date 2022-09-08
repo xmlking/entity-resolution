@@ -113,6 +113,19 @@ go run ./service/entity/...
 #go run ./cmd/er/...   
 ```
 
+https://studio.buf.build/micro/entityapis/main/er.service.entity.v1.EntityService/Ingest?target=http%3A%2F%2Flocalhost%3A8080
+
+```json
+{
+  "externalId": "123e4567-e89b-12d3-a456-426614174000",
+  "names": [{"first":"sumo", "last": "demo"}],
+  "gender": "GENDER_MALE",
+  "emails": {},
+  "phones": {},
+  "addresses": []
+}
+```
+
 To see all _config_ **environment variable** options, run:
 
 ```shell

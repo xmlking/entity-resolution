@@ -77,7 +77,7 @@ buf breaking --against '.git#branch=main'
 buf breaking --against '.git#branch=main,subdir=policyapis'
 
 # for CI
-export HTTPS_GIT=https://github.com/xmlking/yeti.git
+export HTTPS_GIT=https://github.com/xmlking/entity-resolution.git
 buf breaking --against "$(HTTPS_GIT)#branch=main"
 ```
 
