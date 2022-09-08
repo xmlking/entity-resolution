@@ -9,7 +9,7 @@ lintfix:
 
 generate: lint
 	@echo "generate..."
-	@rm -rf gen
+	#@rm -rf gen
 	@buf generate
 
 publish: generate

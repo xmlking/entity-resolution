@@ -63,13 +63,40 @@ func (m *Address) validate(all bool) error {
 
 	// no validation rules for Street
 
-	// no validation rules for City
+	if !_Address_City_Pattern.MatchString(m.GetCity()) {
+		err := AddressValidationError{
+			field:  "City",
+			reason: "value does not match regex pattern \"(?i)^[a-zA-Z]+$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
 
-	// no validation rules for State
+	if !_Address_State_Pattern.MatchString(m.GetState()) {
+		err := AddressValidationError{
+			field:  "State",
+			reason: "value does not match regex pattern \"(?i)^[a-zA-Z]+$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
 
 	// no validation rules for Code
 
-	// no validation rules for Country
+	if !_Address_Country_Pattern.MatchString(m.GetCountry()) {
+		err := AddressValidationError{
+			field:  "Country",
+			reason: "value does not match regex pattern \"(?i)^[a-zA-Z]+$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
 
 	if m.Location != nil {
 
@@ -181,6 +208,12 @@ var _ interface {
 	ErrorName() string
 } = AddressValidationError{}
 
+var _Address_City_Pattern = regexp.MustCompile("(?i)^[a-zA-Z]+$")
+
+var _Address_State_Pattern = regexp.MustCompile("(?i)^[a-zA-Z]+$")
+
+var _Address_Country_Pattern = regexp.MustCompile("(?i)^[a-zA-Z]+$")
+
 // Validate checks the field values on Name with the rules defined in the proto
 // definition for this message. If any rules are violated, the first error
 // encountered is returned, or nil if there are no violations.
@@ -202,6 +235,17 @@ func (m *Name) validate(all bool) error {
 
 	var errors []error
 
+	if utf8.RuneCountInString(m.GetFirst()) < 3 {
+		err := NameValidationError{
+			field:  "First",
+			reason: "value length must be at least 3 runes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
 	if len(m.GetFirst()) > 256 {
 		err := NameValidationError{
 			field:  "First",
@@ -216,7 +260,7 @@ func (m *Name) validate(all bool) error {
 	if !_Name_First_Pattern.MatchString(m.GetFirst()) {
 		err := NameValidationError{
 			field:  "First",
-			reason: "value does not match regex pattern \"^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$\"",
+			reason: "value does not match regex pattern \"(?i)^[a-zA-Z]+$\"",
 		}
 		if !all {
 			return err
@@ -224,7 +268,38 @@ func (m *Name) validate(all bool) error {
 		errors = append(errors, err)
 	}
 
-	// no validation rules for Last
+	if utf8.RuneCountInString(m.GetLast()) < 2 {
+		err := NameValidationError{
+			field:  "Last",
+			reason: "value length must be at least 2 runes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(m.GetLast()) > 256 {
+		err := NameValidationError{
+			field:  "Last",
+			reason: "value length must be at most 256 bytes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if !_Name_Last_Pattern.MatchString(m.GetLast()) {
+		err := NameValidationError{
+			field:  "Last",
+			reason: "value does not match regex pattern \"(?i)^[a-zA-Z]+$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
 
 	if m.Middle != nil {
 		// no validation rules for Middle
@@ -311,7 +386,9 @@ var _ interface {
 	ErrorName() string
 } = NameValidationError{}
 
-var _Name_First_Pattern = regexp.MustCompile("^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$")
+var _Name_First_Pattern = regexp.MustCompile("(?i)^[a-zA-Z]+$")
+
+var _Name_Last_Pattern = regexp.MustCompile("(?i)^[a-zA-Z]+$")
 
 // Validate checks the field values on Member with the rules defined in the
 // proto definition for this message. If any rules are violated, the first
@@ -420,7 +497,16 @@ func (m *Member) validate(all bool) error {
 		}
 	}
 
-	// no validation rules for Gender
+	if _, ok := Gender_name[int32(m.GetGender())]; !ok {
+		err := MemberValidationError{
+			field:  "Gender",
+			reason: "value must be one of the defined enum values",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
 
 	if len(m.GetEmails()) > 5 {
 		err := MemberValidationError{
@@ -445,7 +531,16 @@ func (m *Member) validate(all bool) error {
 			val := m.GetEmails()[key]
 			_ = val
 
-			// no validation rules for Emails[key]
+			if utf8.RuneCountInString(key) < 4 {
+				err := MemberValidationError{
+					field:  fmt.Sprintf("Emails[%v]", key),
+					reason: "value length must be at least 4 runes",
+				}
+				if !all {
+					return err
+				}
+				errors = append(errors, err)
+			}
 
 			if err := m._validateEmail(val); err != nil {
 				err = MemberValidationError{
@@ -485,10 +580,10 @@ func (m *Member) validate(all bool) error {
 			val := m.GetPhones()[key]
 			_ = val
 
-			if utf8.RuneCountInString(key) < 5 {
+			if utf8.RuneCountInString(key) < 4 {
 				err := MemberValidationError{
 					field:  fmt.Sprintf("Phones[%v]", key),
-					reason: "value length must be at least 5 runes",
+					reason: "value length must be at least 4 runes",
 				}
 				if !all {
 					return err
@@ -496,10 +591,21 @@ func (m *Member) validate(all bool) error {
 				errors = append(errors, err)
 			}
 
-			if l := utf8.RuneCountInString(val); l < 5 || l > 15 {
+			if l := utf8.RuneCountInString(val); l < 6 || l > 20 {
 				err := MemberValidationError{
 					field:  fmt.Sprintf("Phones[%v]", key),
-					reason: "value length must be between 5 and 15 runes, inclusive",
+					reason: "value length must be between 6 and 20 runes, inclusive",
+				}
+				if !all {
+					return err
+				}
+				errors = append(errors, err)
+			}
+
+			if !_Member_Phones_Pattern.MatchString(val) {
+				err := MemberValidationError{
+					field:  fmt.Sprintf("Phones[%v]", key),
+					reason: "value does not match regex pattern \"(?i)^[0-9]+$\"",
 				}
 				if !all {
 					return err
@@ -715,3 +821,5 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = MemberValidationError{}
+
+var _Member_Phones_Pattern = regexp.MustCompile("(?i)^[0-9]+$")

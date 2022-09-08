@@ -34,6 +34,10 @@ buf generate
 ### Publish
 and publish to [Buf Schema Registry (BSR)](https://buf.build/explore)
 
+ONE TIME ACTION:
+
+For the fist time, go to `https://buf.build/micro` and click `Create repository` button and add  `micro/entityapis`
+
 > **Note:** use Release process described below, where once `cog bump`, the [GitHub Action](.github/workflows/release.yml) will publish to BSR and GitHub
 
 NOTE: `policyapis` depends of `paymentapis`
