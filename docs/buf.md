@@ -111,7 +111,7 @@ This command will create `/Users/<username>/.netrc` file
 ```shell
 # fill the username and token
 export BUF_USER=sumanth
-export BUF_API_TOKEN=0dc5bb71ab754230a6737fc32c70fa3901097be6bf6f417c8042c505c51181c4
+export BUF_API_TOKEN=<my-token>
 echo ${BUF_API_TOKEN} | buf registry login --username ${BUF_USER} --token-stdin
 # to logout
 buf registry logout

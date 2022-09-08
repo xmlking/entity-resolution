@@ -3,6 +3,10 @@ lint:
 	@buf format -w --exit-code
 	@buf lint
 
+lintfix:
+	@golangci-lint run --fix
+	@buf format -w .
+
 generate: lint
 	@echo "generate..."
 	@rm -rf gen
