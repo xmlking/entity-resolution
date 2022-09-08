@@ -4,7 +4,7 @@
 ## Install
 
 1. Install [prerequisites](docs/prerequisites.md)
-2. Read [Buf](./buf.md)
+2. Read [Buf](docs/buf.md)
 3. Setup [Editor Integration](https://docs.buf.build/editor-integration)
 
 ![buf-goland.png](docs/images/goland-buf-watch.png)

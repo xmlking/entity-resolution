@@ -90,7 +90,7 @@ rm -rf gen
 
 Generate
 ```shell
-buf generate paymentapis 
+buf generate paymentapis
 buf generate policyapis
 buf generate
 # FIXME: https://github.com/bufbuild/buf/issues/560  
@@ -111,7 +111,7 @@ This command will create `/Users/<username>/.netrc` file
 ```shell
 # fill the username and token
 export BUF_USER=sumanth
-export BUF_API_TOKEN=<my-token>
+export BUF_API_TOKEN=0dc5bb71ab754230a6737fc32c70fa3901097be6bf6f417c8042c505c51181c4
 echo ${BUF_API_TOKEN} | buf registry login --username ${BUF_USER} --token-stdin
 # to logout
 buf registry logout
@@ -124,10 +124,8 @@ echo ${BUF_API_TOKEN} | buf registry login --username ${BUF_USER} --token-stdin
 #### Create buf lock files
 one-time-setup
 ```shell
-cd paymentapis
-buf mod update
-cd policyapis
-buf mod update
+buf mod update paymentapis
+buf mod update policyapis
 ```
 This will pull deps into `$HOME/.cache/buf`
 
@@ -145,14 +143,19 @@ buf beta registry repository list  buf.build --page-size 100
 buf beta registry repository get   buf.build/envoyproxy/protoc-gen-validate
 ```
 
-#### Push the Module
+#### Publish Modules
+
+update and publish to [Buf Schema Registry (BSR)](https://buf.build/explore)
+
+NOTE: `policyapis` depends of `paymentapis`
+
 ```shell
-cd paymentapis
-buf push
-cd policyapis
-buf push
-# Create a tagged commit from the CLI with the command:
-buf push --tag <TAG_NAME>
+buf push paymentapis
+#buf push paymentapis --tag <TAG_NAME>
+buf mod update policyapis # may update policyapis/buf.lock
+buf push policyapis
+#buf push policyapis --tag <TAG_NAME>
+# commit changed buf.lock files.
 ```
 
 ### Format
