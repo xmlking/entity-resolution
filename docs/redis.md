@@ -130,6 +130,35 @@ END AS role
 MERGE (b)-[:PEER {role:role}]->(c)
 ```
 
+```shell
+# To create a node with multiple labels, you simply list all the labels separated by a colon:
+
+GRAPH.QUERY g "CREATE (e:Employee:BoardMember {Name: 'Vincent Chan', Title: 'Web marketing lead'}) return e"
+
+# To match a node with multiple labels (AND condition), you should use the same colon notation as well:
+
+GRAPH.QUERY g "MATCH (e:Employee:BoardMember) return e"
+```
+
+To construct a `full-text index` on the title property of movies using the German language and using custom stopwords of all nodes with the label Movie:
+
+More [detains](https://redis.com/blog/redisgraph-2-8-is-generally-available/)
+
+```shell
+GRAPH.QUERY DEMO_GRAPH "CALL db.idx.fulltext.createNodeIndex({ label: 'Movie', language: 'German', stopwords: ['a', 'ab'] }, 'title')"
+```
+
+RediSearch provides 3 additional field configuration options:
+
+* weight – the importance of the text in the field
+* nostem – skip stemming when indexing text
+* phonetic – enable phonetic search on the text
+
+To construct a full-text index on the title property with a phonetic search of all nodes with the label Movie:
+```shell
+GRAPH.QUERY DEMO_GRAPH "CALL db.idx.fulltext.createNodeIndex('Movie', {field: 'title', phonetic: 'dm:en'})"
+```
+
 </details>
 
 ### Data Loading

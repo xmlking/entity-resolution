@@ -30,7 +30,7 @@ gh repo clone xmlking/entity-resolution
 ### Install dependencies
 
 ```shell
-export GOPRIVATE=github.com/entity-resolution/*,go.buf.build
+export GOPRIVATE=github.com/<repo_owner>/*,go.buf.build
 go work sync
 go mod tidy
 ```
@@ -49,15 +49,15 @@ cat .git/hooks/commit-msg
 Update generated proto code from **BSR**, after you publish **proto** to [BSR](https://buf.build/entiy-resolution)
 
 ```shell
-export GOPRIVATE=github.com/entity-resolution/*,go.buf.build
-go get go.buf.build/grpc/go/entity-resolution/entityapis
+export GOPRIVATE=github.com/<repo_owner>/*,go.buf.build
+go get go.buf.build/grpc/go/<repo_owner>/entityapis
 go work sync
 ```
 
 update outdated Go dependencies interactively
 
 ```shell
-export GOPRIVATE=github.com/entity-resolution/*,go.buf.build 
+export GOPRIVATE=github.com/<repo_owner>/*,go.buf.build 
 
 go-mod-upgrade
 # then commit the changes. 

@@ -15,7 +15,7 @@ option java_package = "er.schema.entity.v1";
 
 // Address US PostalAddress
 message Address {
-  string suite = 1;
+  optional string suite = 1;
   string street = 2;
   string city = 3 [(validate.rules).string = {
     pattern: "(?i)^[a-zA-Z]+$"
@@ -24,7 +24,7 @@ message Address {
     pattern: "(?i)^[a-zA-Z]+$"
   }];
   string code = 5;
-  string country = 6 [(validate.rules).string = {
+  optional string country = 6 [(validate.rules).string = {
     pattern: "(?i)^[a-zA-Z]+$"
   }];
   optional google.type.LatLng location = 7;
@@ -68,11 +68,11 @@ enum Gender {
 
 message Member {
   string external_id = 1 [(validate.rules).string.uuid = true];
-  optional string national_id = 12;
-  repeated Name names = 2 [(validate.rules).repeated.min_items = 1];
-  google.type.Date dob = 3;
-  Gender gender = 4 [(validate.rules).enum.defined_only = true];
-  map<string, string> emails = 5 [(validate.rules).map = {
+  optional string national_id = 2;
+  repeated Name names = 3 [(validate.rules).repeated.min_items = 1];
+  google.type.Date dob = 4;
+  Gender gender = 5 [(validate.rules).enum.defined_only = true];
+  map<string, string> emails = 6 [(validate.rules).map = {
     max_pairs: 5
     keys: {
       string: {
@@ -85,7 +85,7 @@ message Member {
       }
     }
   }];
-  map<string, string> phones = 6 [(validate.rules).map = {
+  map<string, string> phones = 7 [(validate.rules).map = {
     max_pairs: 5
     keys: {
       string: {
@@ -100,8 +100,10 @@ message Member {
       }
     }
   }];
-  // map<string, google.type.PhoneNumber> phones = 6 ;
-  repeated Address addresses = 7;
-  //  repeated google.type.PostalAddress addresses = 7;
+  // map<string, google.type.PhoneNumber> phones = 7 ;
+  repeated Address addresses = 8;
+  //  repeated google.type.PostalAddress addresses = 8;
+  map<string, string> identifies = 9;
   optional google.type.DateTime created_on = 20;
+  optional google.type.DateTime updated_on = 21;
 }

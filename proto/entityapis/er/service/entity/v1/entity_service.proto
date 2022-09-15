@@ -4,6 +4,7 @@ syntax = "proto3";
 package er.service.entity.v1;
 
 import "er/schema/entity/v1/entity.proto";
+import "validate/validate.proto";
 
 option java_multiple_files = true;
 option java_package = "er.service.entity.v1";
@@ -14,9 +15,38 @@ service EntityService {
   // rpc IngestStream(stream er.schema.entity.v1.Member) returns (stream Response) {}
   rpc Inquiry(er.schema.entity.v1.Member) returns (Response);
   // rpc InquiryStream(stream er.schema.entity.v1.Member) returns (stream Response) {}
+  rpc Get(GetRequest) returns (er.schema.entity.v1.Member);
+  rpc List(ListRequest) returns (ListResponse);
 }
 
 message Response {
   optional string key = 1;
-  er.schema.entity.v1.Status status = 2;
+  optional uint32 score = 2;
+  er.schema.entity.v1.Status status = 3;
+}
+
+message GetRequest {
+  string id = 1;
+}
+
+message ListRequest {
+  optional string search = 1;
+  optional string filter = 2;
+  optional string select = 3;
+  optional string order_by = 4;
+  // specifically limit the page size in a request. Number of results to return per page.
+  optional uint32 top = 5 [(validate.rules).uint32 = {
+    gte: 1
+    lte: 100
+  }];
+  // $skip is used to page through a result set.
+  optional string skip = 6;
+}
+
+message ListResponse {
+  option (validate.disabled) = true;
+  repeated er.schema.entity.v1.Member results = 1;
+  uint32 total = 2;
+  // $skip is used to page through a result set.
+  optional string skip = 3;
 }
