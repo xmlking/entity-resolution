@@ -58,8 +58,7 @@ update outdated Go dependencies interactively
 
 ```shell
 export GOPRIVATE=github.com/<repo_owner>/*,go.buf.build 
-
-go-mod-upgrade
+GOWORK="off" go-mod-upgrade
 # then commit the changes. 
 ```
 
