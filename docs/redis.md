@@ -191,6 +191,8 @@ redis-cli -h localhost -p 6379 < apps/entity-service/data/employee.redis
     - jedis [Graph SDK](https://github.com/redis/jedis/tree/master/src/main/java/redis/clients/jedis/graph)
       jedis [Graph SDK Examples](https://github.com/redis/jedis/blob/master/src/test/java/redis/clients/jedis/modules/graph/GraphAPITest.java)
     - Building a Recommendation Engine with RedisGraph[video](https://www.youtube.com/watch?v=ZLJ-3DJVufw)
+    - Dungeons, Dragons, and Graph Databases - Guy Royse - NDC London 2022 - [Source Code](https://github.com/guyroyse/dnd-and-graph-databases) and [Video](https://www.youtube.com/watch?v=HqwY_TyxeJw)
+
 
 - **Redis Spring**
     - [Spring Data Redis](https://docs.spring.io/spring-data/redis/docs/2.5.3/reference/html/#why-spring-redis)

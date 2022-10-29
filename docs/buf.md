@@ -22,6 +22,7 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 go install github.com/srikrsna/protoc-gen-gotag@latest
 go install entgo.io/contrib/entproto/cmd/protoc-gen-entgrpc@latest
 go install github.com/bufbuild/connect-go/cmd/protoc-gen-connect-go@latest
+npm i -g @bufbuild/protoc-gen-es
 
 go install github.com/envoyproxy/protoc-gen-validate@latest
 # Installing PGV can currently only be done from source: 

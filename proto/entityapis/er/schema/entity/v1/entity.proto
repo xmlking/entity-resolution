@@ -15,26 +15,23 @@ option java_package = "er.schema.entity.v1";
 
 // Address US PostalAddress
 message Address {
-  optional string suite = 1;
+  optional string suite = 1; // Apartment / Unit #
   string street = 2;
-  string city = 3 [(validate.rules).string = {
-    pattern: "(?i)^[a-zA-Z]+$"
-  }];
-  string state = 4 [(validate.rules).string = {
-    pattern: "(?i)^[a-zA-Z]+$"
-  }];
+  // streetNumber + streetName
+  string city = 3 [(validate.rules).string = {pattern: "(?i)^[a-zA-Z]+$"}];
+  // stateOrProvince
+  string state = 4 [(validate.rules).string = {pattern: "(?i)^[a-zA-Z]+$"}];
+  // postalCode
   string code = 5;
-  optional string country = 6 [(validate.rules).string = {
-    pattern: "(?i)^[a-zA-Z]+$"
-  }];
+  optional string country = 6 [(validate.rules).string = {pattern: "(?i)^[a-zA-Z]+$"}];
   optional google.type.LatLng location = 7;
 }
 
 /*
-message Location {
-  double lat = 1 [(validate.rules).double = { gte: -90,  lte: 90 }];
-  double lng = 2 [(validate.rules).double = { gte: -180, lte: 180 }];
-}
+   message Location {
+   double lat = 1 [(validate.rules).double = { gte: -90,  lte: 90 }];
+   double lng = 2 [(validate.rules).double = { gte: -180, lte: 180 }];
+   }
 */
 
 message Name {
@@ -75,22 +72,16 @@ message Member {
   map<string, string> emails = 6 [(validate.rules).map = {
     max_pairs: 5
     keys: {
-      string: {
-        min_len: 4,
-      }
+      string: {min_len: 4}
     }
     values: {
-      string: {
-        email: true
-      }
+      string: {email: true}
     }
   }];
   map<string, string> phones = 7 [(validate.rules).map = {
     max_pairs: 5
     keys: {
-      string: {
-        min_len: 4,
-      }
+      string: {min_len: 4}
     }
     values: {
       string: {

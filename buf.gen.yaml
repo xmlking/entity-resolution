@@ -25,9 +25,9 @@ plugins:
       - lang=go
       - paths=source_relative
 
-#  - remote: buf.build/protocolbuffers/plugins/java:v21.5.0-1
+#  - remote: buf.build/protocolbuffers/plugins/java
 #    out: gen/java
-#  - remote: buf.build/protocolbuffers/plugins/kotlin:v21.5.0-1
+#  - remote: buf.build/protocolbuffers/plugins/kotlin
 #    out: gen/kotlin
 
   ### connect-web ###

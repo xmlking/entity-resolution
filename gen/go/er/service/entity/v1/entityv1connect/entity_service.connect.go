@@ -31,6 +31,9 @@ type EntityServiceClient interface {
 	Ingest(context.Context, *connect_go.Request[v1.Member]) (*connect_go.Response[v11.Response], error)
 	// rpc IngestStream(stream er.schema.entity.v1.Member) returns (stream Response) {}
 	Inquiry(context.Context, *connect_go.Request[v1.Member]) (*connect_go.Response[v11.Response], error)
+	// rpc InquiryStream(stream er.schema.entity.v1.Member) returns (stream Response) {}
+	Get(context.Context, *connect_go.Request[v11.GetRequest]) (*connect_go.Response[v1.Member], error)
+	List(context.Context, *connect_go.Request[v11.ListRequest]) (*connect_go.Response[v11.ListResponse], error)
 }
 
 // NewEntityServiceClient constructs a client for the er.service.entity.v1.EntityService service. By
@@ -53,6 +56,16 @@ func NewEntityServiceClient(httpClient connect_go.HTTPClient, baseURL string, op
 			baseURL+"/er.service.entity.v1.EntityService/Inquiry",
 			opts...,
 		),
+		get: connect_go.NewClient[v11.GetRequest, v1.Member](
+			httpClient,
+			baseURL+"/er.service.entity.v1.EntityService/Get",
+			opts...,
+		),
+		list: connect_go.NewClient[v11.ListRequest, v11.ListResponse](
+			httpClient,
+			baseURL+"/er.service.entity.v1.EntityService/List",
+			opts...,
+		),
 	}
 }
 
@@ -60,6 +73,8 @@ func NewEntityServiceClient(httpClient connect_go.HTTPClient, baseURL string, op
 type entityServiceClient struct {
 	ingest  *connect_go.Client[v1.Member, v11.Response]
 	inquiry *connect_go.Client[v1.Member, v11.Response]
+	get     *connect_go.Client[v11.GetRequest, v1.Member]
+	list    *connect_go.Client[v11.ListRequest, v11.ListResponse]
 }
 
 // Ingest calls er.service.entity.v1.EntityService.Ingest.
@@ -72,11 +87,24 @@ func (c *entityServiceClient) Inquiry(ctx context.Context, req *connect_go.Reque
 	return c.inquiry.CallUnary(ctx, req)
 }
 
+// Get calls er.service.entity.v1.EntityService.Get.
+func (c *entityServiceClient) Get(ctx context.Context, req *connect_go.Request[v11.GetRequest]) (*connect_go.Response[v1.Member], error) {
+	return c.get.CallUnary(ctx, req)
+}
+
+// List calls er.service.entity.v1.EntityService.List.
+func (c *entityServiceClient) List(ctx context.Context, req *connect_go.Request[v11.ListRequest]) (*connect_go.Response[v11.ListResponse], error) {
+	return c.list.CallUnary(ctx, req)
+}
+
 // EntityServiceHandler is an implementation of the er.service.entity.v1.EntityService service.
 type EntityServiceHandler interface {
 	Ingest(context.Context, *connect_go.Request[v1.Member]) (*connect_go.Response[v11.Response], error)
 	// rpc IngestStream(stream er.schema.entity.v1.Member) returns (stream Response) {}
 	Inquiry(context.Context, *connect_go.Request[v1.Member]) (*connect_go.Response[v11.Response], error)
+	// rpc InquiryStream(stream er.schema.entity.v1.Member) returns (stream Response) {}
+	Get(context.Context, *connect_go.Request[v11.GetRequest]) (*connect_go.Response[v1.Member], error)
+	List(context.Context, *connect_go.Request[v11.ListRequest]) (*connect_go.Response[v11.ListResponse], error)
 }
 
 // NewEntityServiceHandler builds an HTTP handler from the service implementation. It returns the
@@ -96,6 +124,16 @@ func NewEntityServiceHandler(svc EntityServiceHandler, opts ...connect_go.Handle
 		svc.Inquiry,
 		opts...,
 	))
+	mux.Handle("/er.service.entity.v1.EntityService/Get", connect_go.NewUnaryHandler(
+		"/er.service.entity.v1.EntityService/Get",
+		svc.Get,
+		opts...,
+	))
+	mux.Handle("/er.service.entity.v1.EntityService/List", connect_go.NewUnaryHandler(
+		"/er.service.entity.v1.EntityService/List",
+		svc.List,
+		opts...,
+	))
 	return "/er.service.entity.v1.EntityService/", mux
 }
 
@@ -108,4 +146,12 @@ func (UnimplementedEntityServiceHandler) Ingest(context.Context, *connect_go.Req
 
 func (UnimplementedEntityServiceHandler) Inquiry(context.Context, *connect_go.Request[v1.Member]) (*connect_go.Response[v11.Response], error) {
 	return nil, connect_go.NewError(connect_go.CodeUnimplemented, errors.New("er.service.entity.v1.EntityService.Inquiry is not implemented"))
+}
+
+func (UnimplementedEntityServiceHandler) Get(context.Context, *connect_go.Request[v11.GetRequest]) (*connect_go.Response[v1.Member], error) {
+	return nil, connect_go.NewError(connect_go.CodeUnimplemented, errors.New("er.service.entity.v1.EntityService.Get is not implemented"))
+}
+
+func (UnimplementedEntityServiceHandler) List(context.Context, *connect_go.Request[v11.ListRequest]) (*connect_go.Response[v11.ListResponse], error) {
+	return nil, connect_go.NewError(connect_go.CodeUnimplemented, errors.New("er.service.entity.v1.EntityService.List is not implemented"))
 }

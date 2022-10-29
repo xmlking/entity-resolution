@@ -59,8 +59,6 @@ func (m *Address) validate(all bool) error {
 
 	var errors []error
 
-	// no validation rules for Suite
-
 	// no validation rules for Street
 
 	if !_Address_City_Pattern.MatchString(m.GetCity()) {
@@ -87,15 +85,23 @@ func (m *Address) validate(all bool) error {
 
 	// no validation rules for Code
 
-	if !_Address_Country_Pattern.MatchString(m.GetCountry()) {
-		err := AddressValidationError{
-			field:  "Country",
-			reason: "value does not match regex pattern \"(?i)^[a-zA-Z]+$\"",
+	if m.Suite != nil {
+		// no validation rules for Suite
+	}
+
+	if m.Country != nil {
+
+		if !_Address_Country_Pattern.MatchString(m.GetCountry()) {
+			err := AddressValidationError{
+				field:  "Country",
+				reason: "value does not match regex pattern \"(?i)^[a-zA-Z]+$\"",
+			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
 		}
-		if !all {
-			return err
-		}
-		errors = append(errors, err)
+
 	}
 
 	if m.Location != nil {
@@ -650,6 +656,8 @@ func (m *Member) validate(all bool) error {
 
 	}
 
+	// no validation rules for Identifies
+
 	if m.NationalId != nil {
 		// no validation rules for NationalId
 	}
@@ -679,6 +687,39 @@ func (m *Member) validate(all bool) error {
 			if err := v.Validate(); err != nil {
 				return MemberValidationError{
 					field:  "CreatedOn",
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	if m.UpdatedOn != nil {
+
+		if all {
+			switch v := interface{}(m.GetUpdatedOn()).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, MemberValidationError{
+						field:  "UpdatedOn",
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, MemberValidationError{
+						field:  "UpdatedOn",
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(m.GetUpdatedOn()).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return MemberValidationError{
+					field:  "UpdatedOn",
 					reason: "embedded message failed validation",
 					cause:  err,
 				}
