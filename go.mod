@@ -3,7 +3,7 @@ module github.com/xmlking/entity-resolution
 go 1.19
 
 require (
-	github.com/bufbuild/connect-go v0.4.0
+	github.com/bufbuild/connect-go v1.4.0
 	github.com/envoyproxy/protoc-gen-validate v0.6.7
 	github.com/gomodule/redigo v1.8.9
 	github.com/redislabs/redisgraph-go v2.0.2+incompatible
